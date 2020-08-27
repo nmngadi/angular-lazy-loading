@@ -11,11 +11,11 @@ const routes: Routes = [
   },
   {
     path: 'contact-us',
-    component: ContactUsComponent
+    loadChildren: () => import('src/app/contact-us/contact-us.module').then(m => m.ContactUsModule)
   },
   {
     path: 'about',
-    component: AboutUsComponent
+    loadChildren: () => import('src/app/about-us/about-us.module').then(m => m.AboutUsModule)
   }
 ];
 
